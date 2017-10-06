@@ -1,4 +1,12 @@
 <?php
+/**
+ * Expected json format is normal key-value pairs:
+ * {
+ *   "key": "value",
+ *   "key2": "value2",
+ *   "some_key": "${var.some_tf_var}"
+ * }
+ */
 $usage = "Usage: php beanstalk_env_vars.php <json_file.json>\n";
 if ($argc < 2) {
     echo $usage;
