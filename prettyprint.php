@@ -7,4 +7,9 @@ if (2 !== $argc) {
 }
 
 $input = file_get_contents($argv[1]);
-echo json_encode(json_decode($input, true), JSON_PRETTY_PRINT) . "\n";
+$decoded = json_decode($input, true);
+if (false == $decoded) {
+    echo json_last_error_msg(). "\n";
+    exit;
+}
+echo json_encode($decoded, JSON_PRETTY_PRINT) . "\n";
