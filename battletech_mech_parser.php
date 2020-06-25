@@ -85,10 +85,10 @@ class ChassisDef {
 			$max_armor = 0;
 			$max_rear_armor = 0;
 			if (array_key_exists('MaxArmor', $location)) {
-				$max_arrmor = $location['MaxArmor'];
+				$max_armor = $location['MaxArmor'];
 			}
 			if (array_key_exists('MaxRearArmor', $location)) {
-				$max_rear_arrmor = $location['MaxRearArmor'];
+				$max_rear_armor = $location['MaxRearArmor'];
 			}
 
 			if ($max_armor > 0) {
